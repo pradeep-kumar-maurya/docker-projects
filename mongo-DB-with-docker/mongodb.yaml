@@ -10,6 +10,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:  # we should use /data/db as the directory inside the mongodb container
+      - /c/Users/prmaurya/Documents/data:/data/db
 
   mongo-express:
     image: mongo-express
